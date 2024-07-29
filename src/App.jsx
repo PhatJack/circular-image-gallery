@@ -85,7 +85,7 @@ function App() {
         <div className="gallery">
           {Array.from({ length: 8 }).map((_, i) => (
             <div key={i} className="item">
-              <img src={`/img${i + 1}.jpg`} alt="img" />
+              <img src={`img${i + 1}.jpg`} alt="img" />
             </div>
           ))}
         </div>
