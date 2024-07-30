@@ -56,7 +56,7 @@ const Home = () => {
 					repeat: -1,
 					ease: "none",
 				},
-				">=2"
+				">"
 			);
 		},
 		{

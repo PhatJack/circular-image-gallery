@@ -5,13 +5,14 @@ import Header from './include/Header'
 import Footer from './include/Footer'
 import TransitionPage from './TransitionPage'
 
-const DefaultLayout = ({ children }) => {
+const DefaultLayout = () => {
 	return (
 		<>
-			<Preload />
-			{/* <TransitionPage /> */}
+			{/* <Preload /> */}
 			<Header />
-			<Outlet />
+			<TransitionPage>
+				<Outlet />
+			</TransitionPage>
 			<Footer />
 		</>
 	)
