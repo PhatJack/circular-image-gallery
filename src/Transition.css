@@ -1,0 +1,29 @@
+.transition-in,
+.transition-out {
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.transition-in .row {
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(80deg, #fff, #dd88ee);
+	animation: gradient1 1s ease infinite;
+}
+
+@keyframes gradient1{
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: 100% 0%;
+	}
+}

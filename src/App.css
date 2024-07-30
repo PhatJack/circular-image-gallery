@@ -37,7 +37,8 @@ nav {
 	z-index: 10;
 }
 
-nav ul {
+nav ul,
+.footer ul {
 	display: flex;
 	gap: 10px;
 }
@@ -110,7 +111,20 @@ img {
 	height: 100%;
 	object-fit: cover;
 }
+
 p.name {
 	position: absolute;
-	font-size: 5em;
+	font-size: 1em;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2em;
+	font-size: 25px;
+	color: black;
 }

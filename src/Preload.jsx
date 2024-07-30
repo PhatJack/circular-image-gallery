@@ -4,7 +4,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 const Preload = () => {
 
-	const preloadContainer = useRef()
+	const preloadContainer = useRef(null)
 	useGSAP(() => {
 		const tl = gsap.timeline()
 		const items = document.querySelectorAll('.preload_col')
@@ -13,9 +13,10 @@ const Preload = () => {
 			scaleY: 0,
 			transformOrigin: 'bottom',
 			stagger: {
-				amount: 0.5,
+				amount: 0.75,
 				from: "center",
 			},
+			delay: 1,
 		}).to(preloadContainer.current, {
 			autoAlpha: 0,
 			duration: 0.25,
@@ -29,7 +30,7 @@ const Preload = () => {
 		<div ref={preloadContainer} className="preload_container">
 			<div className="preload_group">
 				{
-					Array.from({ length: 20 }).map((_, i) => (
+					Array.from({ length: 21 }).map((_, i) => (
 						<div key={i} className="preload_col"></div>
 					))
 				}
