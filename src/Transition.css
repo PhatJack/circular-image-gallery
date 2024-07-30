@@ -15,15 +15,20 @@
 	width: 100%;
 	height: 100%;
 	background-image: linear-gradient(80deg, #fff, #dd88ee);
+	background-size: 300% 200%;
 	animation: gradient1 1s ease infinite;
 }
 
-@keyframes gradient1{
+@keyframes gradient1 {
 	0% {
-		background-position: 0 0;
+		background-position: 0% 0%;
+	}
+
+	50% {
+		background-position: 100% 100%;
 	}
 
 	100% {
-		background-position: 100% 0%;
+		background-position: 0% 00%;
 	}
 }

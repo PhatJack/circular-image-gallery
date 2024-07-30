@@ -1,8 +1,10 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import React, { useRef } from 'react'
+import TransitionPage from './TransitionPage';
 const Home = () => {
 	const container = useRef(null);
+	const home = gsap.timeline()
 	useGSAP(
 		() => {
 			const items = document.querySelectorAll(".item");
@@ -66,6 +68,7 @@ const Home = () => {
 
 	return (
 		<>
+			<TransitionPage timeline={home} />
 			<div className="container" ref={container}>
 				<div className="gallery">
 					{Array.from({ length: 8 }).map((_, i) => (

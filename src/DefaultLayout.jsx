@@ -10,9 +10,7 @@ const DefaultLayout = () => {
 		<>
 			{/* <Preload /> */}
 			<Header />
-			<TransitionPage>
-				<Outlet />
-			</TransitionPage>
+			<Outlet />
 			<Footer />
 		</>
 	)

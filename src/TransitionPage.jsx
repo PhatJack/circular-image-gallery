@@ -2,12 +2,11 @@ import React, { useLayoutEffect } from 'react'
 import './Transition.css'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-const TransitionPage = ({ children }) => {
+const TransitionPage = ({ timeline }) => {
 
 	useGSAP(() => {
-		const tl = gsap.timeline()
-		tl.set(".transition-in .row", { x: "-100%" })
-		tl.to(".transition-in .row",
+		timeline.set(".transition-in .row", { x: "-100%" })
+		timeline.to(".transition-in .row",
 			{
 				x: "0%",
 				duration: 0.5,
@@ -26,7 +25,6 @@ const TransitionPage = ({ children }) => {
 
 	return (
 		<>
-			{children}
 			<div className="transition-in">
 				{
 					Array.from({ length: 10 }).map((_, i) => (

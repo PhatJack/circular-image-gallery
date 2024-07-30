@@ -73,6 +73,14 @@ ul li:hover::before {
 	background-color: black;
 }
 
+ul li.active a {
+	color: white;
+}
+
+ul li.active::before {
+	background-color: black;
+}
+
 ul li:hover a {
 	color: white;
 }
